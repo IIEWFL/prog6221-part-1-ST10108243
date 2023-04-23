@@ -1,0 +1,8 @@
+C:\Users\tris0\Downloads\project\prog6221-part-1-nikkigordhan-master\prog6221-part-1-nikkigordhan-master\PROG_PoE_Part_1\bin\Debug\PROG_PoE_Part_1.exe.config
+C:\Users\tris0\Downloads\project\prog6221-part-1-nikkigordhan-master\prog6221-part-1-nikkigordhan-master\PROG_PoE_Part_1\bin\Debug\PROG_PoE_Part_1.exe
+C:\Users\tris0\Downloads\project\prog6221-part-1-nikkigordhan-master\prog6221-part-1-nikkigordhan-master\PROG_PoE_Part_1\bin\Debug\PROG_PoE_Part_1.pdb
+C:\Users\tris0\Downloads\project\prog6221-part-1-nikkigordhan-master\prog6221-part-1-nikkigordhan-master\PROG_PoE_Part_1\obj\Debug\PROG_PoE_Part_1.csproj.AssemblyReference.cache
+C:\Users\tris0\Downloads\project\prog6221-part-1-nikkigordhan-master\prog6221-part-1-nikkigordhan-master\PROG_PoE_Part_1\obj\Debug\PROG_PoE_Part_1.csproj.SuggestedBindingRedirects.cache
+C:\Users\tris0\Downloads\project\prog6221-part-1-nikkigordhan-master\prog6221-part-1-nikkigordhan-master\PROG_PoE_Part_1\obj\Debug\PROG_PoE_Part_1.csproj.CoreCompileInputs.cache
+C:\Users\tris0\Downloads\project\prog6221-part-1-nikkigordhan-master\prog6221-part-1-nikkigordhan-master\PROG_PoE_Part_1\obj\Debug\PROG_PoE_Part_1.exe
+C:\Users\tris0\Downloads\project\prog6221-part-1-nikkigordhan-master\prog6221-part-1-nikkigordhan-master\PROG_PoE_Part_1\obj\Debug\PROG_PoE_Part_1.pdb

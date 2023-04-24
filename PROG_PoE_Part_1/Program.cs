@@ -292,6 +292,7 @@ namespace PROG_PoE_Part_1
             }
             catch
             {
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Error with loading the application.");
             }
 

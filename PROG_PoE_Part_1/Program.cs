@@ -86,23 +86,33 @@ namespace PROG_PoE_Part_1
         public static string[] Enter_Steps()
         {
             Console.WriteLine("Enter the number of steps: ");
-            int num_of_Steps = int.Parse(Console.ReadLine());
-            //asks the user to enter the number of steps and then converts in to an integer.
-
-            string[] Steps = new string[num_of_Steps];
-            //calls the Steps array to store the number of steps and creates the Steps object.
-
-            for (int i = 0; i < num_of_Steps; i++)
+            string snum_of_Steps = Console.ReadLine();
+            int num_of_Steps;
+            if(!int.TryParse(snum_of_Steps, out num_of_Steps))
             {
-                Console.WriteLine($"Enter the step #{i + 1}:");
-                string steps = Console.ReadLine();
-                //asks the user to enter the step, if the user enters 3 steps then because i is = 0 it will add 1 and output the first step.
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Please enter a numeric value.");
+                return null;
+            }
+            //asks the user to enter the number of steps and then converts in to an integer.
+            else
+            {
+                string[] Steps = new string[num_of_Steps];
+                //calls the Steps array to store the number of steps and creates the Steps object.
 
-                Steps[i] = steps;
-                //stores the step in the Step array.
+                for (int i = 0; i < num_of_Steps; i++)
+                {
+                    Console.WriteLine($"Enter the step #{i + 1}:");
+                    string steps = Console.ReadLine();
+                    //asks the user to enter the step, if the user enters 3 steps then because i is = 0 it will add 1 and output the first step.
+
+                    Steps[i] = steps;
+                    //stores the step in the Step array.
+                }
+
+                return Steps;
             }
 
-            return Steps;
         }
         //enters the steps
         public static Ingredient[] Enter_Ingredients()

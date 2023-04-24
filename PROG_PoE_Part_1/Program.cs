@@ -192,6 +192,8 @@ namespace PROG_PoE_Part_1
     {
         static void Main(string[] args)
         {
+            try
+            {
                 Recipe orecipe = new Recipe();
                 //creates an object orecipe of type Recipe.
                 Console.ForegroundColor = ConsoleColor.Blue;
@@ -201,27 +203,27 @@ namespace PROG_PoE_Part_1
                 while (true)
                 {
                     Console.ForegroundColor = ConsoleColor.White;
-                //https://www.tutorialspoint.com/how-to-change-the-foreground-color-of-text-in-chash-console#:~:text=To%20change%20the%20Foreground%20Color%20of%20text%2C%20use%20the%20Console,ForegroundColor%20property%20in%20C%23.
-                //AmitDiwan
-                //updated 13 November 2019
+                    //https://www.tutorialspoint.com/how-to-change-the-foreground-color-of-text-in-chash-console#:~:text=To%20change%20the%20Foreground%20Color%20of%20text%2C%20use%20the%20Console,ForegroundColor%20property%20in%20C%23.
+                    //AmitDiwan
+                    //updated 13 November 2019
 
-                     Console.WriteLine("Choose an option for what you want to do.");
+                    Console.WriteLine("Choose an option for what you want to do.");
                     Console.WriteLine("(1) Create a new recipe");
                     Console.WriteLine("(2) Display the recipe");
                     Console.WriteLine("(3) Scale the recipe");
                     Console.WriteLine("(4) Reset the ingredient quantity to its orginal value");
                     Console.WriteLine("(5) Clear the recipe");
                     Console.WriteLine("(6) Quit");
-                    
+
                     string choiceString = Console.ReadLine();
                     //gives the user options to choose from.
 
                     if (!int.TryParse(choiceString, out int choice))
                     {
-                    Console.ForegroundColor = ConsoleColor.DarkRed;
-                    Console.WriteLine("Invalid option. Please enter a number from 1 to 6.");
-                    Console.ForegroundColor = ConsoleColor.White;
-                    continue;
+                        Console.ForegroundColor = ConsoleColor.DarkRed;
+                        Console.WriteLine("Invalid option. Please enter a number from 1 to 6.");
+                        Console.ForegroundColor = ConsoleColor.White;
+                        continue;
                     }
                     //if the user chooses an invalid option.
 
@@ -284,20 +286,21 @@ namespace PROG_PoE_Part_1
                             break;
                         case 5:
 
-                        Console.WriteLine("Would you like to clear the recipe. Yes or No.");
-                        string sResetRecipe = Console.ReadLine();
+                            Console.WriteLine("Would you like to clear the recipe. Yes or No.");
+                            string sResetRecipe = Console.ReadLine();
 
-                        if (sResetRecipe == "Yes")
-                        {
-                            orecipe = null;
-                            //makes sure that the object orecipe is cleared.
-                            Console.WriteLine("Recipe has been cleared.");
-                        }
-                        else
-                        {
-                            Console.WriteLine("No recipe was created to clear.")
-;                        }
-;                           
+                            if (sResetRecipe == "Yes")
+                            {
+                                orecipe = null;
+                                //makes sure that the object orecipe is cleared.
+                                Console.WriteLine("Recipe has been cleared.");
+                            }
+                            else
+                            {
+                                Console.WriteLine("No recipe was created to clear.")
+    ;
+                            }
+;
                             break;
                         case 6:
                             Console.WriteLine("Thank you for using the eCook_Book!");
@@ -310,11 +313,19 @@ namespace PROG_PoE_Part_1
                             break;
                     }
                 }
-            
-            
-        }
-        //contains main method to output the recipe.
 
+
+            }
+
+            catch (Exception e)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Errror occcured in application." + '\n' + e);
+            }
+
+            //contains main method to output the recipe.
+
+        }
     }
 }
 //namespace

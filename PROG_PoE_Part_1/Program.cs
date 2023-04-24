@@ -320,7 +320,7 @@ namespace PROG_PoE_Part_1
             catch (Exception e)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Errror occcured in application." + '\n' + e);
+                Console.WriteLine("Restart application. Error occcured in application. " + '\n' + e);
             }
 
             //contains main method to output the recipe.

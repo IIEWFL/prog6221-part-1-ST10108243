@@ -14,6 +14,10 @@ namespace PROG_PoE_Part_1
         }
         //getters and setters using automatic properties.
 
+        //https://www.w3schools.com/cs/cs_properties.php
+        //w3schools
+
+
         public double dIngredient_quantity;
         //creates a variable called dIngredient_quantity of type double.
         public double Ingredient_Quantity
@@ -148,7 +152,7 @@ namespace PROG_PoE_Part_1
 
             foreach (String steps in sSteps)
             {
-                Console.WriteLine("Step" + iStepCounter + ":" + steps);
+                Console.WriteLine("Step " + iStepCounter + ": " + steps);
             }
             //goes through the Steps array to output step.
 
@@ -196,26 +200,28 @@ namespace PROG_PoE_Part_1
 
                 while (true)
                 {
-                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.ForegroundColor = ConsoleColor.White;
                 //https://www.tutorialspoint.com/how-to-change-the-foreground-color-of-text-in-chash-console#:~:text=To%20change%20the%20Foreground%20Color%20of%20text%2C%20use%20the%20Console,ForegroundColor%20property%20in%20C%23.
                 //AmitDiwan
                 //updated 13 November 2019
 
-                Console.WriteLine("Choose an option for what you want to do.");
+                     Console.WriteLine("Choose an option for what you want to do.");
                     Console.WriteLine("(1) Create a new recipe");
                     Console.WriteLine("(2) Display the recipe");
                     Console.WriteLine("(3) Scale the recipe");
                     Console.WriteLine("(4) Reset the ingredient quantity to its orginal value");
                     Console.WriteLine("(5) Clear the recipe");
                     Console.WriteLine("(6) Quit");
-                    Console.ForegroundColor = ConsoleColor.White;
+                    
                     string choiceString = Console.ReadLine();
                     //gives the user options to choose from.
 
                     if (!int.TryParse(choiceString, out int choice))
                     {
-                        Console.WriteLine("Invalid option. Please enter a number from 1 to 6.");
-                        continue;
+                    Console.ForegroundColor = ConsoleColor.DarkRed;
+                    Console.WriteLine("Invalid option. Please enter a number from 1 to 6.");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    continue;
                     }
                     //if the user chooses an invalid option.
 

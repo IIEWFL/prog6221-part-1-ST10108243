@@ -145,7 +145,7 @@ namespace PROG_PoE_Part_1
             Console.WriteLine("The steps are: ");
             Console.ForegroundColor = ConsoleColor.White;
             int iStepCounter = 1;
-            
+
             foreach (String steps in sSteps)
             {
                 Console.WriteLine("Step" + iStepCounter + ":" + steps);
@@ -188,11 +188,10 @@ namespace PROG_PoE_Part_1
     {
         static void Main(string[] args)
         {
-            try
-            {
-
                 Recipe orecipe = new Recipe();
                 //creates an object orecipe of type Recipe.
+                Console.ForegroundColor = ConsoleColor.Blue;
+                //changes the colour of the font.
                 Console.WriteLine("Welcome to your very own eCook-Book. Where you can create any one of your favourite recipes.");
 
                 while (true)
@@ -284,20 +283,17 @@ namespace PROG_PoE_Part_1
                             //allows the user to quit.
                             return;
                         default:
+                            Console.ForegroundColor = ConsoleColor.Red;
                             Console.WriteLine("Invalid option. Please enter a number from 1 to 6.");
                             //user chooses an invalid option.
                             break;
                     }
                 }
-            }
-            catch
-            {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Error with loading the application.");
-            }
+            
+            
+        }
+        //contains main method to output the recipe.
 
     }
-    //contains main method to output the recipe.
-
 }
 //namespace

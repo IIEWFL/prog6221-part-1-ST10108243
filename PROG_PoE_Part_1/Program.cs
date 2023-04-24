@@ -70,11 +70,15 @@ namespace PROG_PoE_Part_1
 
         public void Create_A_Recipe()
         {
+           
             ingredients = Enter_Ingredients();
             //gets the values from Enter_Ingredients() and assigns it to the variable ingredients.
 
-            steps = Enter_Steps();
-            //gets the steps from Enter_Steps() and assigns it to the variable steps.
+            if (ingredients != null)
+            {
+                steps = Enter_Steps();
+                //gets the steps from Enter_Steps() and assigns it to the variable steps.
+            }
 
         }
         //creates a new recipe.
@@ -107,37 +111,42 @@ namespace PROG_PoE_Part_1
             Console.WriteLine("Enter the number of ingredients: ");
             string snum_of_Ingredients = Console.ReadLine();
             int num_of_Ingredients;
-                if (!int.TryParse(snum_of_Ingredients, out num_of_Ingredients))
-                {
-                    Console.WriteLine("Please enter a numeric value.");
-                
-                }
-                
-            //asks the user for the number of ingredients and then converts it to an integer.
-
-            Ingredient[] ingredients = new Ingredient[num_of_Ingredients];
-            //calls the Ingredients array to store the ingredients and creates the Ingredient object.
-
-            for (int i = 0; i < num_of_Ingredients; i++)
+            if (!int.TryParse(snum_of_Ingredients, out num_of_Ingredients))
             {
-               
-                Console.WriteLine("Enter the ingredient name: ");
-                string Name_of_Ingredient = Console.ReadLine();
-                //asks the user to enter the ingredients name and then converts it to a string.
-
-                Console.WriteLine("Enter the ingredients quantity: " + '\n' + "Please enter only the number.Example: 2 (tablespoon of sugar)");
-                double Quantity_of_Ingedient = double.Parse(Console.ReadLine());
-                //asks the user to enter the quantity of the ingredient and then converts it to a double.
-
-                Console.WriteLine("Enter the unit of mesurement: " + '\n' + "Example: teaspoon, tablespoon, cup, ect");
-                string Unit_of_Ingredient = Console.ReadLine();
-                //asks the user to enter the unit of measurement for the ingredient and then converts it to a string.
-
-                ingredients[i] = new Ingredient { Ingredient_Name = Name_of_Ingredient, Ingredient_Quantity = Quantity_of_Ingedient, Ingredient_Unit = Unit_of_Ingredient };
-                //adds the ingredient details to the igredient array.
+                Console.ForegroundColor = ConsoleColor.Red; 
+                Console.WriteLine("Please enter a numeric value.");
+                return null;
             }
+            else
+            {
 
-            return ingredients;
+                //asks the user for the number of ingredients and then converts it to an integer.
+
+                Ingredient[] ingredients = new Ingredient[num_of_Ingredients];
+                //calls the Ingredients array to store the ingredients and creates the Ingredient object.
+
+                for (int i = 0; i < num_of_Ingredients; i++)
+                {
+
+                    Console.WriteLine("Enter the ingredient name: ");
+                    string Name_of_Ingredient = Console.ReadLine();
+                    //asks the user to enter the ingredients name and then converts it to a string.
+
+                    Console.WriteLine("Enter the ingredients quantity: " + '\n' + "Please enter only the number.Example: 2 (tablespoon of sugar)");
+                    double Quantity_of_Ingedient = double.Parse(Console.ReadLine());
+                    //asks the user to enter the quantity of the ingredient and then converts it to a double.
+
+                    Console.WriteLine("Enter the unit of mesurement: " + '\n' + "Example: teaspoon, tablespoon, cup, ect");
+                    string Unit_of_Ingredient = Console.ReadLine();
+                    //asks the user to enter the unit of measurement for the ingredient and then converts it to a string.
+
+                    ingredients[i] = new Ingredient { Ingredient_Name = Name_of_Ingredient, Ingredient_Quantity = Quantity_of_Ingedient, Ingredient_Unit = Unit_of_Ingredient };
+                    //adds the ingredient details to the igredient array.
+                }
+                return ingredients;
+
+            }
+            
         }
         //enters the ingredients
 

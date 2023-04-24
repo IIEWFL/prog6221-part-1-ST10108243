@@ -197,7 +197,11 @@ namespace PROG_PoE_Part_1
                 while (true)
                 {
                     Console.ForegroundColor = ConsoleColor.Blue;
-                    Console.WriteLine("Choose an option for what you want to do.");
+                //https://www.tutorialspoint.com/how-to-change-the-foreground-color-of-text-in-chash-console#:~:text=To%20change%20the%20Foreground%20Color%20of%20text%2C%20use%20the%20Console,ForegroundColor%20property%20in%20C%23.
+                //AmitDiwan
+                //updated 13 November 2019
+
+                Console.WriteLine("Choose an option for what you want to do.");
                     Console.WriteLine("(1) Create a new recipe");
                     Console.WriteLine("(2) Display the recipe");
                     Console.WriteLine("(3) Scale the recipe");

@@ -304,10 +304,10 @@ namespace PROG_PoE_Part_1
                             break;
                         case 5:
 
-                            Console.WriteLine("Would you like to clear the recipe. Yes or No.");
+                            Console.WriteLine("Would you like to clear the recipe. YES or NO.");
                             string sResetRecipe = Console.ReadLine();
 
-                            if (sResetRecipe == "Yes")
+                            if (sResetRecipe.ToUpper() == "YES")
                             {
                                 orecipe = null;
                                 //makes sure that the object orecipe is cleared.

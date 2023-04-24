@@ -103,8 +103,16 @@ namespace PROG_PoE_Part_1
         //enters the steps
         public static Ingredient[] Enter_Ingredients()
         {
+            
             Console.WriteLine("Enter the number of ingredients: ");
-            int num_of_Ingredients = int.Parse(Console.ReadLine());
+            string snum_of_Ingredients = Console.ReadLine();
+            int num_of_Ingredients;
+                if (!int.TryParse(snum_of_Ingredients, out num_of_Ingredients))
+                {
+                    Console.WriteLine("Please enter a numeric value.");
+                
+                }
+                
             //asks the user for the number of ingredients and then converts it to an integer.
 
             Ingredient[] ingredients = new Ingredient[num_of_Ingredients];
@@ -112,6 +120,7 @@ namespace PROG_PoE_Part_1
 
             for (int i = 0; i < num_of_Ingredients; i++)
             {
+               
                 Console.WriteLine("Enter the ingredient name: ");
                 string Name_of_Ingredient = Console.ReadLine();
                 //asks the user to enter the ingredients name and then converts it to a string.
@@ -297,10 +306,9 @@ namespace PROG_PoE_Part_1
                             }
                             else
                             {
-                                Console.WriteLine("No recipe was created to clear.")
-    ;
+                                Console.WriteLine("No recipe was created to clear.");
                             }
-;
+
                             break;
                         case 6:
                             Console.WriteLine("Thank you for using the eCook_Book!");

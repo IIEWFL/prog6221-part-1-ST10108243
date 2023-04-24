@@ -284,9 +284,20 @@ namespace PROG_PoE_Part_1
                             break;
                         case 5:
 
+                        Console.WriteLine("Would you like to clear the recipe. Yes or No.");
+                        string sResetRecipe = Console.ReadLine();
+
+                        if (sResetRecipe == "Yes")
+                        {
                             orecipe = null;
                             //makes sure that the object orecipe is cleared.
                             Console.WriteLine("Recipe has been cleared.");
+                        }
+                        else
+                        {
+                            Console.WriteLine("No recipe was created to clear.")
+;                        }
+;                           
                             break;
                         case 6:
                             Console.WriteLine("Thank you for using the eCook_Book!");

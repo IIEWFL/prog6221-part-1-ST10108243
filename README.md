@@ -2,9 +2,9 @@
 <h2> Nikki Gordhan ST10108243 </h2>
 <h3> The application does the following: </h3>
 <p> The user shall be able to enter the details for a single recipe: </br>
-	a. The number of ingredients.
-	b. For each ingredient: the name, quantity, and unit of measurement. For example, one tablespoon of sugar.
-	c. The number of steps.
+	a. The number of ingredients.</br>
+	b. For each ingredient: the name, quantity, and unit of measurement. For example, one tablespoon of sugar.</br>
+	c. The number of steps.</br>
 	d. For each step: a description of what the user should do. </p>
 
 	

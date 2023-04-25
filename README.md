@@ -6,5 +6,6 @@
 	b. For each ingredient: the name, quantity, and unit of measurement. For example, one tablespoon of sugar.</br>
 	c. The number of steps.</br>
 	d. For each step: a description of what the user should do. </p>
+<p> The software shall display the full recipe, including the ingredients and steps, in a neat format to the user. </br> </p>
 
 	

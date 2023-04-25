@@ -6,6 +6,6 @@
 	b. For each ingredient: the name, quantity, and unit of measurement. For example, one tablespoon of sugar.</br>
 	c. The number of steps.</br>
 	d. For each step: a description of what the user should do. </p>
-<p>2.  The software shall display the full recipe, including the ingredients and steps, in a neat format to the user. </br> </p>
-
+<p> 2.  The software shall display the full recipe, including the ingredients and steps, in a neat format to the user. </br> </p>
+<p> 3. The user shall be able to request that the recipe is scaled by a factor of 0.5 (half), 2 (double) or 3 (triple). All the ingredient quantities shall be changed accordingly when the recipe is displayed. For example, our one tablespoon of sugar will become two tablespoons of sugar if the factor is 2. </br> </p>
 	

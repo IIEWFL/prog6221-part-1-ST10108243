@@ -1,0 +1,8 @@
+C:\Varsity\2023\PROG6221\PoE\Part 1\PROG_PoE_Part_1\PROG_PoE_Part_1\bin\Release\PROG_PoE_Part_1.exe.config
+C:\Varsity\2023\PROG6221\PoE\Part 1\PROG_PoE_Part_1\PROG_PoE_Part_1\bin\Release\PROG_PoE_Part_1.exe
+C:\Varsity\2023\PROG6221\PoE\Part 1\PROG_PoE_Part_1\PROG_PoE_Part_1\bin\Release\PROG_PoE_Part_1.pdb
+C:\Varsity\2023\PROG6221\PoE\Part 1\PROG_PoE_Part_1\PROG_PoE_Part_1\obj\Release\PROG_PoE_Part_1.csproj.AssemblyReference.cache
+C:\Varsity\2023\PROG6221\PoE\Part 1\PROG_PoE_Part_1\PROG_PoE_Part_1\obj\Release\PROG_PoE_Part_1.csproj.SuggestedBindingRedirects.cache
+C:\Varsity\2023\PROG6221\PoE\Part 1\PROG_PoE_Part_1\PROG_PoE_Part_1\obj\Release\PROG_PoE_Part_1.csproj.CoreCompileInputs.cache
+C:\Varsity\2023\PROG6221\PoE\Part 1\PROG_PoE_Part_1\PROG_PoE_Part_1\obj\Release\PROG_PoE_Part_1.exe
+C:\Varsity\2023\PROG6221\PoE\Part 1\PROG_PoE_Part_1\PROG_PoE_Part_1\obj\Release\PROG_PoE_Part_1.pdb

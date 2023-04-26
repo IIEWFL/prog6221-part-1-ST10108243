@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Diagnostics.Eventing.Reader;
+using System.Globalization;
+using System.Runtime.InteropServices;
 //new comment to test commit
 
 namespace PROG_PoE_Part_1
@@ -67,6 +70,16 @@ namespace PROG_PoE_Part_1
             set { factor = value; }
         }
         //getters and setters using automatic properties.
+
+        public Boolean bScaled;
+
+        public Boolean Scaled
+        {
+            get { return bScaled; }
+            set { bScaled = value; }
+        }
+        //getters and setters using automatic properties.
+
 
         public void Create_A_Recipe()
         {
@@ -162,7 +175,7 @@ namespace PROG_PoE_Part_1
 
         public void Display_Recipe()
         {
-            Console.ForegroundColor = ConsoleColor.DarkBlue;
+            Console.ForegroundColor = ConsoleColor.DarkCyan;
             Console.WriteLine("The recipe is shown below:");
             Console.WriteLine("The ingredients are: ");
             Console.ForegroundColor = ConsoleColor.White;
@@ -187,26 +200,99 @@ namespace PROG_PoE_Part_1
         }
         //displays the recipe.
 
+        public void Conversion_Scaled(int iLoopCounter, double scaled)
+        {
+            switch (ingredients[iLoopCounter].sIngredient_unit.ToUpper())
+            {
+                case "TABLESPOON":
+                    {
+                        if (scaled%8 == 0 )
+                        {
+                            ingredients[iLoopCounter].dIngredient_quantity = scaled / 8;
+                            // assign the ingredient.value to the divied (whole no) no.
+
+                            ingredients[iLoopCounter].Ingredient_Unit = "CUPS"; 
+                            // change ingreindets measurement to cups.
+                        }
+                        else
+                        {
+                            ingredients[iLoopCounter].dIngredient_quantity  = scaled;
+                        }
+                        
+                        break;
+                    }
+                   default:
+                    {
+                        ingredients[iLoopCounter].dIngredient_quantity = scaled;
+                        break;
+                    }
+            }
+        }
+
+        public void Conversion_Reset(int iLoopCounter, double scaled)
+        {
+            if (bScaled)
+            {
+                switch (ingredients[iLoopCounter].sIngredient_unit.ToUpper())
+                {
+
+                    case "CUPS":
+                        {
+
+                                ingredients[iLoopCounter].dIngredient_quantity = scaled * 8;
+                                // assign the ingredient.value to the divied (whole no) no.
+
+                                ingredients[iLoopCounter].Ingredient_Unit = "TABLESPOON";
+                            // change ingreindets measurement to cups.
+                            bScaled = false;
+
+                            break;
+                        }
+                        default:
+                        {
+                            ingredients[iLoopCounter].dIngredient_quantity = scaled;
+                            bScaled = false;
+                            break;
+                        }
+
+
+                }
+            }
+        }
+
+
         public void Scale_Recipe()
         {
             double scaled = 1;
             //variable called scaled and is equal to 1.
+            int iLoopCounter = 0;
+
 
             foreach (Ingredient ingredient in ingredients)
             {
                 scaled = ingredient.Ingredient_Quantity * factor;
-                ingredient.Ingredient_Quantity = scaled;
+                String sMeasurement = ingredient.sIngredient_unit;
+
+                Conversion_Scaled( iLoopCounter ,scaled );
+
             }
             //gets the ingredient quantity and times it by the factor to get the scaled value.
+
+            bScaled = true;
         }
         //allows the user to scale the recipe.
 
         public void Reset_Quantities(double factor)
         {
+            int iLoopCounter = 0;
             foreach (Ingredient ingredients in Ingredients)
             {
                 double scaled = ingredients.Ingredient_Quantity / factor;
-                ingredients.Ingredient_Quantity = scaled;
+                String sMeasurement = ingredients.sIngredient_unit;
+
+                Conversion_Reset(iLoopCounter, scaled);
+
+
                 Console.WriteLine("Quantities are reset to orginal quantity.The orginal quantity is " + ingredients.Ingredient_Quantity);
             }
             //gets the scaled quantity and divides it by the factor to get the orginal quantity.
@@ -224,9 +310,12 @@ namespace PROG_PoE_Part_1
             {
                 Recipe orecipe = new Recipe();
                 //creates an object orecipe of type Recipe.
-                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.ForegroundColor = ConsoleColor.DarkCyan;
                 //changes the colour of the font.
+                Console.Title = "eCookBook";
                 Console.WriteLine("Welcome to your very own eCook-Book. Where you can create any one of your favourite recipes.");
+               
+
 
                 while (true)
                 {
@@ -347,7 +436,9 @@ namespace PROG_PoE_Part_1
             catch (Exception e)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Restart application. Error occcured in application. " + '\n' + e);
+                Console.WriteLine("Restart application. Error occcured in application. ");
+                Console.ReadLine();
+
             }
 
             //contains main method to output the recipe.

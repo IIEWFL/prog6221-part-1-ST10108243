@@ -24,4 +24,4 @@ https://github.com/IIEWFL/prog6221-part-1-nikkigordhan/blob/main/PROG_PoE_Part_1
 <h5> For a regular user: </h5>
 Step 1: Open up the release file. </br>
 Step 2: Use the link to open up the file. </br> 
-</p>
+https://github.com/IIEWFL/prog6221-part-1-nikkigordhan/blob/Part_1/PROG_PoE_Part_1/bin/Debug/PROG_PoE_Part_1.exe </p>

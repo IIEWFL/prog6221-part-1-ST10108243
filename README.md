@@ -15,4 +15,4 @@
 
 <h4> How to run the application: </h4>
 <h5> For a developer: </h5>
-<p> 
+<h5> For a regular user: 

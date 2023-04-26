@@ -14,3 +14,5 @@
 <p> 6. The software shall not persist the user data between runs. The data shall only be stored in memory while the software is running.  </br> </p>
 
 <h4> How to run the application: </h4>
+<h5> For a developer: </h5>
+<p> 

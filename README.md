@@ -15,4 +15,7 @@
 
 <h4> How to run the application: </h4>
 <h5> For a developer: </h5>
-<h5> For a regular user: 
+<p> Step 1: Open up the release file. </br>
+	Step 2: use the link to open up the file.
+	
+<h5> For a regular user: </h5>
